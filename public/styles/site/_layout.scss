@@ -1,0 +1,152 @@
+$border-width: 3px;
+$supa-red: #FF044C;
+$supa-blue: #06E2FF;
+
+/* UTILITY CLASSES */
+.absolute-center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+/* HEADER/NAV */
+#header {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 60px;
+	background-color: $supa-red;
+	width: 100%;
+	border-bottom: $border-width solid white;
+	z-index: 1000;
+}
+#header-logo{
+	display: inline-block;
+	line-height: 60px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+#header-nav {
+	display: inline-block;
+	line-height: 60px;
+	float: right;	
+}
+.header-nav-el {
+	color: white;	
+	display: inline-block;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+#header-nav-newsletter {
+	background-color: $supa-blue;
+	height: 60px;
+	border-bottom: $border-width solid white;
+	border-left: $border-width solid white;
+}
+
+/* FOOTER */
+#footer {
+	width: 100%;
+	background-color: white;
+	height: 40px;
+	line-height: 40px;
+	color: $supa-red;
+	text-align: center;
+}
+
+/* SPLASH */
+#splash {
+	margin-top: 60px;
+	position: relative;
+}
+.splash-section {
+	height: calc(100vh - 60px);
+	max-height: 800px;
+	width: 50%;
+	position: relative;
+}
+#splash-left {
+	background-color: $supa-red;	
+}
+#splash-right {
+	background-color: white;	
+}
+#splash-center {
+}
+#splash-center-text {
+	border: $border-width solid $supa-blue;
+	color: $supa-red;
+	font-size: 1.2em;
+	font-weight: bold;
+	background-color: white;
+	border-radius: 20px;
+	width: 220px;
+	padding: 10px 20px;
+	text-align: center;
+}
+#splash-center-image {
+	border: $border-width solid $supa-blue;
+	border-radius: 100px;
+	width: 180px;
+	height: 180px;
+	background-image: url("../images/splash-center-image.jpg");
+	margin: 0 auto;
+}
+
+/* TILES */
+.tile {
+	height: 45vw;
+	display: inline-block;
+	border: $border-width solid white;
+	background-size: cover;
+}
+.tile-corner-text {
+	margin: 15px;
+	position: absolute;
+	font-size: 1.2em;
+}
+#top-left.tile-corner-text {
+	top: 0px;		
+	left: 0px;
+	text-align: left;
+}
+#top-right.tile-corner-text {
+	top: 0px;		
+	right: 0px;
+	text-align: right;
+}
+#bottom-left.tile-corner-text {
+	bottom: 0px;		
+	left: 0px;
+	text-align: left;
+}
+#bottom-right.tile-corner-text {
+	bottom: 0px;		
+	right: 0px;
+	text-align: right;
+}
+.tile-button {
+	font-size: 1.8em;
+	font-weight: 500;
+	border-width: $border-width;
+	border-style: solid;
+	padding: 10px 40px;
+}
+.tile-tagline {
+	font-size: 1.8em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

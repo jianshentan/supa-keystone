@@ -1,0 +1,91 @@
+{{!< default}}
+{{>splash}}
+
+<div class="row" style="margin:0px;">
+	{{#each tiles}}
+	<div class="tile col-xs-6" style="
+		background-image: url('{{backgroundImage.filename}}');
+		background-color:{{backgroundColor}};
+		color:{{color}};">
+		
+		<div id="top-left" class="tile-corner-text" style="color:{{color}}">
+			{{topLeftText}}
+		</div>
+		<div id="top-right" class="tile-corner-text" style="color:{{color}}">
+			{{topRightText}}
+		</div>
+		<div id="bottom-left" class="tile-corner-text" style="color:{{color}}">
+			{{bottomLeftText}}
+		</div>
+		<div id="bottom-right" class="tile-corner-text" style="color:{{color}}">
+			{{bottomRightText}}
+		</div>
+		
+		{{!-- Template 1: Centered Button --}}
+		{{#ifeq template 1 }}
+		<a href="{{buttonUrlT1}}">
+			<div class="tile-button absolute-center" style="
+				background-color:{{backgroundColor}};
+				color:{{color}};
+				border-color:{{color}};">
+				{{buttonTextT1}}	
+			</div>
+		</a>
+		{{/ifeq}}
+		
+		{{!-- Template 2: Tagline + Button --}}
+		{{#ifeq template 2 }}
+		<div class="absolute-center" style="text-align:center;">
+			<div class="tile-tagline">
+				{{taglineT2}}
+			</div>
+			<br>
+			<a href="{{buttonUrlT2}}">
+				<div class="tile-button" style="
+					display: inline-block;
+					background-color:{{backgroundColor}};
+					color:{{color}};
+					border-color:{{color}};">
+					{{buttonTextT2}}	
+				</div>
+			</a>
+		</div>
+		{{/ifeq}}
+		
+		{{!-- Template 3: Image + Button --}}
+		{{#ifeq template 3 }}
+		<div class="absolute-center" style="text-align:center;">
+			<div class="tile-image">
+				<img src="{{imageT3.filename}}">
+			</div>
+			<br>
+			<a href="{{buttonUrlT3}}">
+				<div class="tile-button" style="
+					display: inline-block;
+					background-color:{{backgroundColor}};
+					color:{{color}};
+					border-color:{{color}};">
+					{{buttonTextT3}}	
+				</div>
+			</a>
+		</div>	
+		{{/ifeq}}
+		
+		{{!-- Template 4: Tagline + Body Text --}}
+		{{#ifeq template 4 }}
+		<div class="absolute-center">
+			<div class="tile-tagline">
+				{{taglineT4}}
+			</div>
+			<br>
+			<div class="tile-html" style="
+				display: inline-block;
+				color:{{color}};">
+				{{{bodyHtmlT4}}}
+			</div>
+		</div>	
+		{{/ifeq}}
+		
+	</div>
+	{{/each}}
+</div>
