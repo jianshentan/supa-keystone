@@ -5821,6 +5821,10 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+body {
+  font-family: Poppins;
+  font-weight: 400; }
+
 /* UTILITY CLASSES */
 .absolute-center {
   position: absolute;
@@ -5866,8 +5870,8 @@ button.close {
 #footer {
   width: 100%;
   background-color: white;
-  height: 40px;
-  line-height: 40px;
+  height: 60px;
+  line-height: 60px;
   color: #FF044C;
   text-align: center; }
 
@@ -5889,6 +5893,7 @@ button.close {
   background-color: white; }
 
 #splash-center-text {
+  margin: 0 auto;
   border: 3px solid #06E2FF;
   color: #FF044C;
   font-size: 1.2em;
@@ -5911,13 +5916,16 @@ button.close {
 .tile {
   height: 45vw;
   display: inline-block;
-  border: 3px solid white;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  border-top: 6px solid white;
   background-size: cover; }
 
 .tile-corner-text {
   margin: 15px;
   position: absolute;
-  font-size: 1.2em; }
+  font-size: 1.4em;
+  font-weight: 500; }
 
 #top-left.tile-corner-text {
   top: 0px;
@@ -5944,7 +5952,62 @@ button.close {
   font-weight: 500;
   border-width: 3px;
   border-style: solid;
-  padding: 10px 40px; }
+  padding: 10px 40px;
+  display: inline;
+  text-align: center; }
 
 .tile-tagline {
   font-size: 1.8em; }
+
+.tile-position-top {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15%; }
+
+.tile-position-center-top {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30%; }
+
+.tile-position-center {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%); }
+
+.tile-position-center-bottom {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30%; }
+
+.tile-position-bottom {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15%; }
+
+.tile-image-grid {
+  text-align: center; }
+
+.tile-image-grid-image {
+  width: 100px;
+  margin: 2vw; }
+
+/* MAIN FONTS */
+@font-face {
+  font-family: Poppins;
+  src: url("../fonts/Poppins-SemiBold.eot") format("eot"), url("../fonts/Poppins-SemiBold.woff") format("woff"), url("../fonts/Poppins-SemiBold.ttf") format("truetype"), url("../fonts/Poppins-SemiBold.svg") format("svg");
+  font-style: none; }
+
+@font-face {
+  font-family: Poppins;
+  src: url("../fonts/Poppins-Bold.eot") format("eot"), url("../fonts/Poppins-Bold.woff") format("woff"), url("../fonts/Poppins-Bold.ttf") format("truetype"), url("../fonts/Poppins-Bold.svg") format("svg");
+  font-weight: 500; }

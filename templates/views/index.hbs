@@ -21,10 +21,16 @@
 			{{bottomRightText}}
 		</div>
 		
-		{{!-- Template 1: Centered Button --}}
+		{{!-- Template 1: Button --}}
 		{{#ifeq template 1 }}
 		<a href="{{buttonUrlT1}}">
-			<div class="tile-button absolute-center" style="
+			<div class="tile-button
+			{{#ifeq buttonPositionT1 'top'}}tile-position-top{{/ifeq}}
+			{{#ifeq buttonPositionT1 'center'}}tile-position-center{{/ifeq}}
+			{{#ifeq buttonPositionT1 'bottom'}}tile-position-bottom{{/ifeq}}
+			{{#ifeq buttonPositionT1 'center-top'}}tile-position-center-top{{/ifeq}}
+			{{#ifeq buttonPositionT1 'center-bottom'}}tile-position-center-bottom{{/ifeq}}
+			" style="
 				background-color:{{backgroundColor}};
 				color:{{color}};
 				border-color:{{color}};">
@@ -35,40 +41,60 @@
 		
 		{{!-- Template 2: Tagline + Button --}}
 		{{#ifeq template 2 }}
-		<div class="absolute-center" style="text-align:center;">
-			<div class="tile-tagline">
-				{{taglineT2}}
-			</div>
-			<br>
-			<a href="{{buttonUrlT2}}">
-				<div class="tile-button" style="
-					display: inline-block;
-					background-color:{{backgroundColor}};
-					color:{{color}};
-					border-color:{{color}};">
-					{{buttonTextT2}}	
-				</div>
-			</a>
+		<div class="tile-tagline
+		{{#ifeq taglinePositionT2 'top'}}tile-position-top{{/ifeq}}
+		{{#ifeq taglinePositionT2 'center'}}tile-position-center{{/ifeq}}
+		{{#ifeq taglinePositionT2 'bottom'}}tile-position-bottom{{/ifeq}}		
+		{{#ifeq taglinePositionT2 'center-top'}}tile-position-center-top{{/ifeq}}
+		{{#ifeq taglinePositionT2 'center-bottom'}}tile-position-center-bottom{{/ifeq}}
+		">
+			{{taglineT2}}
 		</div>
+		<br>
+		<a href="{{buttonUrlT2}}">
+			<div class="tile-button
+			{{#ifeq buttonPositionT2 'top'}}tile-position-top{{/ifeq}}
+			{{#ifeq buttonPositionT2 'center'}}tile-position-center{{/ifeq}}
+			{{#ifeq buttonPositionT2 'bottom'}}tile-position-bottom{{/ifeq}}
+			{{#ifeq buttonPositionT2 'center-top'}}tile-position-center-top{{/ifeq}}
+			{{#ifeq buttonPositionT2 'center-bottom'}}tile-position-center-bottom{{/ifeq}}
+			" style="
+				display: inline-block;
+				background-color:{{backgroundColor}};
+				color:{{color}};
+				border-color:{{color}};">
+				{{buttonTextT2}}	
+			</div>
+		</a>
 		{{/ifeq}}
 		
 		{{!-- Template 3: Image + Button --}}
 		{{#ifeq template 3 }}
-		<div class="absolute-center" style="text-align:center;">
-			<div class="tile-image">
-				<img src="{{imageT3.filename}}">
+		<div class="tile-image
+		{{#ifeq imagePositionT3 'top'}}tile-position-top{{/ifeq}}
+		{{#ifeq imagePositionT3 'center'}}tile-position-center{{/ifeq}}
+		{{#ifeq imagePositionT3 'bottom'}}tile-position-bottom{{/ifeq}}
+		{{#ifeq imagePositionT3 'center-top'}}tile-position-center-top{{/ifeq}}
+		{{#ifeq imagePositionT3 'center-bottom'}}tile-position-center-bottom{{/ifeq}}
+		">
+			<img src="{{imageT3.filename}}">
+		</div>
+		<br>
+		<a href="{{buttonUrlT3}}">
+			<div class="tile-button
+			{{#ifeq buttonPositionT3 'top'}}tile-position-top{{/ifeq}}
+			{{#ifeq buttonPositionT3 'center'}}tile-position-center{{/ifeq}}
+			{{#ifeq buttonPositionT3 'bottom'}}tile-position-bottom{{/ifeq}}
+			{{#ifeq buttonPositionT3 'center-top'}}tile-position-center-top{{/ifeq}}
+			{{#ifeq buttonPositionT3 'center-bottom'}}tile-position-center-bottom{{/ifeq}}
+			" style="
+				display: inline-block;
+				background-color:{{backgroundColor}};
+				color:{{color}};
+				border-color:{{color}};">
+				{{buttonTextT3}}	
 			</div>
-			<br>
-			<a href="{{buttonUrlT3}}">
-				<div class="tile-button" style="
-					display: inline-block;
-					background-color:{{backgroundColor}};
-					color:{{color}};
-					border-color:{{color}};">
-					{{buttonTextT3}}	
-				</div>
-			</a>
-		</div>	
+		</a>
 		{{/ifeq}}
 		
 		{{!-- Template 4: Tagline + Body Text --}}
@@ -84,6 +110,38 @@
 				{{{bodyHtmlT4}}}
 			</div>
 		</div>	
+		{{/ifeq}}
+		
+		{{!-- Template 5: Tagline + Image Grid --}}
+		{{#ifeq template 5 }}
+		<div class="absolute-center" style="width:75%;">
+			<div class="tile-tagline" style="text-align: center;">
+				{{taglineT5}}
+			</div>
+			<br>
+			<div class="tile-image-grid">
+				{{#ifexists image1T5}}
+				<a href="{{image1T5}}" target="_blank">
+					<img class="tile-image-grid-image" src="{{image1T5.filename}}">
+				</a>
+				{{/ifexists}}
+				{{#ifexists image2T5}}
+				<a href="{{image2UrlT5}}" target="_blank">
+					<img class="tile-image-grid-image" src="{{image2T5.filename}}">
+				</a>
+				{{/ifexists}}
+				{{#ifexists image3T5}}
+				<a href="{{image3UrlT5}}" target="_blank">
+					<img class="tile-image-grid-image" src="{{image3T5.filename}}">
+				</a>
+				{{/ifexists}}
+				{{#ifexists image4T5}}
+				<a href="{{image4UrlT5}}" target="_blank">
+					<img class="tile-image-grid-image" src="{{image4T5.filename}}">
+				</a>
+				{{/ifexists}}
+			</div>
+		</div>
 		{{/ifeq}}
 		
 	</div>

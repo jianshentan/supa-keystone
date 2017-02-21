@@ -27,6 +27,16 @@ module.exports = function () {
 			return options.inverse(this);
 		}
 	};
+	
+	// standard hbs if-exists check, pass in one value from template
+	// {{#ifexists keyToCheck}} [requires an else blockin template regardless]
+	_helpers.ifexists = function (a, options) {
+		if (a.size !== undefined) {
+			return options.fn(this);
+		} else {
+			return options.inverse(this);
+		}
+	};
 
 	/**
 	 * Port of Ghost helpers to support cross-theming
