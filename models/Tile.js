@@ -43,8 +43,13 @@ Tile.add(
 			options: [{ value: 1, label: 'Template: Button'},
 								{ value: 2, label: 'Template: Tagline + Button'},
 								{ value: 3, label: 'Template: Image + Button'},
-								{ value: 4, label: 'Template: Tagline + Body Text'},
-								{ value: 5, label: 'Template: Tagline + Image Grid'}],
+								{ value: 4, label: 'Template: Image + Tagline'},
+								{ value: 5, label: 'Template: Tagline + Body Text'},
+								{ value: 6, label: 'Template: Tagline + Image Grid'},
+								{ value: 7, label: 'Template: Video'},
+								{ value: 8, label: 'Custom: Quickstart'},
+								{ value: 9, label: 'Custom: Email Signup'},
+								{ value: 10, label: 'Custom: Contact Form'}],
 			initial: true
 		}
 	},
@@ -66,7 +71,7 @@ Tile.add(
 			dependsOn: { template: 1 },
 			label: "Button Position",
 			type: Types.Select,
-			options: 'top, center, bottom, center-top, center-bottom',
+			options: 'top, center-top, center, center-bottom, bottom',
 			default: 'center'	
 		}
 	},
@@ -82,7 +87,7 @@ Tile.add(
 			dependsOn: { template: 2 },
 			label: "Tagline Position",
 			type: Types.Select,
-			options: 'top, center, bottom, center-top, center-bottom',
+			options: 'top, center-top, center, center-bottom, bottom',
 			default: 'center'	
 		},
 		buttonTextT2: { 
@@ -99,7 +104,7 @@ Tile.add(
 			dependsOn: { template: 2 },
 			label: "Button Position",
 			type: Types.Select,
-			options: 'top, center, bottom, center-top, center-bottom',
+			options: 'top, center-top, center, center-bottom, bottom',
 			default: 'center'	
 		}
 	},
@@ -116,7 +121,7 @@ Tile.add(
 			dependsOn: { template: 3 },
 			label: "Image Position",
 			type: Types.Select,
-			options: 'top, center, bottom, center-top, center-bottom',
+			options: 'top, center-top, center, center-bottom, bottom',
 			default: 'center'	
 		},
 		buttonTextT3: { 
@@ -133,78 +138,135 @@ Tile.add(
 			dependsOn: { template: 3 },
 			label: "Button Position",
 			type: Types.Select,
-			options: 'top, center, bottom, center-top, center-bottom',
+			options: 'top, center-top, center, center-bottom, bottom',
 			default: 'center'	
 		}
 	},
 	// header for Template 4
-	{ heading: "Template: Tagline + Body Text", dependsOn: { template: 4 } },
+	{ heading: "Template: Image + Tagline", dependsOn: { template: 4 } },
 	{
+		imageT4: { 
+			dependsOn: { template: 4 },
+			label: "Image",
+			type: Types.File, 
+			storage: localStorage
+		},
+		imagePositionT4: {
+			dependsOn: { template: 4 },
+			label: "Image Position",
+			type: Types.Select,
+			options: 'top, center-top, center, center-bottom, bottom',
+			default: 'center'	
+		},
 		taglineT4: { 
 			dependsOn: { template: 4 },
 			label: "Tagline",
+			type: Types.Text 
+		},
+		taglinePositionT4: {
+			dependsOn: { template: 4 },
+			label: "Tagline Position",
+			type: Types.Select,
+			options: 'top, center-top, center, center-bottom, bottom',
+			default: 'center'	
+		},
+	},
+	// header for Template 5
+	{ heading: "Template: Tagline + Body Text", dependsOn: { template: 5 } },
+	{
+		taglineT5: { 
+			dependsOn: { template: 5 },
+			label: "Tagline",
 			type: Types.Text
 		},
-		bodyHtmlT4: {
-			dependsOn: { template: 4 },
+		bodyHtmlT5: {
+			dependsOn: { template: 5 },
 			label: "Body Html",
 			type: Types.Html,
 			wysiwyg: true
 		}
 	},
-	// header for Template 5
-	{ heading: "Template: Tagline + Image Grid", dependsOn: { template: 5 } },
+	// header for Template 6
+	{ heading: "Template: Tagline + Image Grid", dependsOn: { template: 6 } },
 	{
-		taglineT5: {
-			dependsOn: { template: 5 },
+		taglineT6: {
+			dependsOn: { template: 6 },
 			label: "Tagline",
 			type: Types.Text		
 		},
-		image1T5: {
-			dependsOn: { template: 5 },
+		image1T6: {
+			dependsOn: { template: 6 },
 			label: "Image 1",
 			type: Types.File, 
 			storage: localStorage
 		},
-		image1UrlT5: {
-			dependsOn: { template: 5 },
+		image1UrlT6: {
+			dependsOn: { template: 6 },
 			label: "Image 1 URL",
 			type: Types.Url
 		},
-		image2T5: {
-			dependsOn: { template: 5 },
+		image2T6: {
+			dependsOn: { template: 6 },
 			label: "Image 2",
 			type: Types.File, 
 			storage: localStorage
 		},
-		image2UrlT5: {
-			dependsOn: { template: 5 },
+		image2UrlT6: {
+			dependsOn: { template: 6 },
 			label: "Image 2 URL",
 			type: Types.Url
 		},
-		image3T5: {
-			dependsOn: { template: 5 },
+		image3T6: {
+			dependsOn: { template: 6 },
 			label: "Image 3",
 			type: Types.File, 
 			storage: localStorage
 		},
-		image3UrlT5: {
-			dependsOn: { template: 5 },
+		image3UrlT6: {
+			dependsOn: { template: 6 },
 			label: "Image 3 URL",
 			type: Types.Url
 		},
-		image4T5: {
-			dependsOn: { template: 5 },
+		image4T6: {
+			dependsOn: { template: 6 },
 			label: "Image 4",
 			type: Types.File, 
 			storage: localStorage
 		},
-		image4UrlT5: {
-			dependsOn: { template: 5 },
+		image4UrlT6: {
+			dependsOn: { template: 6 },
 			label: "Image 4 URL",
 			type: Types.Url
 		}
-	}
+	},
+	// heading for Template 7
+	{ heading: "Template: Video Player", dependsOn: { template: 7 } },
+	{
+		videoT7: {
+			dependsOn: { template: 7 },
+			label: "iFrame Code",
+			type: Types.Html,
+			wysiwyg: true
+		},
+		taglineT7: {
+			dependsOn: { template: 7 },
+			label: "Tagline",
+			type: Types.Text		
+		},
+		taglinePositionT7: {
+			dependsOn: { template: 7 },
+			label: "Tagline Position",
+			type: Types.Select,
+			options: 'top, center-top, center, center-bottom, bottom',
+			default: 'center'	
+		},
+	},
+	// Text for Template 8
+	{ heading: "Customized: Quickstart [no customization below]", dependsOn: { template: 8 } },
+	// Text for Template 9
+	{ heading: "Customized: Email Signup [no customization below]", dependsOn: { template: 9 } },
+	// Text for Template 10
+	{ heading: "Customized: Contact Form [no customization below]", dependsOn: { template: 10 } }
 );
 
 /**

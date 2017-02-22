@@ -79,7 +79,6 @@
 		">
 			<img src="{{imageT3.filename}}">
 		</div>
-		<br>
 		<a href="{{buttonUrlT3}}">
 			<div class="tile-button
 			{{#ifeq buttonPositionT3 'top'}}tile-position-top{{/ifeq}}
@@ -97,50 +96,193 @@
 		</a>
 		{{/ifeq}}
 		
-		{{!-- Template 4: Tagline + Body Text --}}
+		{{!-- Template 4: Image + Tagline --}}
 		{{#ifeq template 4 }}
+		<div class="tile-tagline
+		{{#ifeq taglinePositionT4 'top'}}tile-position-top{{/ifeq}}
+		{{#ifeq taglinePositionT4 'center'}}tile-position-center{{/ifeq}}
+		{{#ifeq taglinePositionT4 'bottom'}}tile-position-bottom{{/ifeq}}		
+		{{#ifeq taglinePositionT4 'center-top'}}tile-position-center-top{{/ifeq}}
+		{{#ifeq taglinePositionT4 'center-bottom'}}tile-position-center-bottom{{/ifeq}}
+		">
+			{{taglineT4}}
+		</div>
+		<div class="tile-image
+		{{#ifeq imagePositionT4 'top'}}tile-position-top{{/ifeq}}
+		{{#ifeq imagePositionT4 'center'}}tile-position-center{{/ifeq}}
+		{{#ifeq imagePositionT4 'bottom'}}tile-position-bottom{{/ifeq}}
+		{{#ifeq imagePositionT4 'center-top'}}tile-position-center-top{{/ifeq}}
+		{{#ifeq imagePositionT4 'center-bottom'}}tile-position-center-bottom{{/ifeq}}
+		">
+			<img src="{{imageT4.filename}}">
+		</div>
+		{{/ifeq}}
+		
+		{{!-- Template 5: Tagline + Body Text --}}
+		{{#ifeq template 5 }}
 		<div class="absolute-center">
 			<div class="tile-tagline">
-				{{taglineT4}}
+				{{taglineT5}}
 			</div>
 			<br>
 			<div class="tile-html" style="
 				display: inline-block;
 				color:{{color}};">
-				{{{bodyHtmlT4}}}
+				{{{bodyHtmlT5}}}
 			</div>
 		</div>	
 		{{/ifeq}}
 		
-		{{!-- Template 5: Tagline + Image Grid --}}
-		{{#ifeq template 5 }}
+		{{!-- Template 6: Tagline + Image Grid --}}
+		{{#ifeq template 6 }}
 		<div class="absolute-center" style="width:75%;">
 			<div class="tile-tagline" style="text-align: center;">
-				{{taglineT5}}
+				{{taglineT6}}
 			</div>
 			<br>
 			<div class="tile-image-grid">
-				{{#ifexists image1T5}}
-				<a href="{{image1T5}}" target="_blank">
-					<img class="tile-image-grid-image" src="{{image1T5.filename}}">
+				{{#ifexists image1T6}}
+				<a href="{{image1T6}}" target="_blank">
+					<img class="tile-image-grid-image" src="{{image1T6.filename}}">
 				</a>
 				{{/ifexists}}
-				{{#ifexists image2T5}}
-				<a href="{{image2UrlT5}}" target="_blank">
-					<img class="tile-image-grid-image" src="{{image2T5.filename}}">
+				{{#ifexists image2T6}}
+				<a href="{{image2UrlT6}}" target="_blank">
+					<img class="tile-image-grid-image" src="{{image2T6.filename}}">
 				</a>
 				{{/ifexists}}
-				{{#ifexists image3T5}}
-				<a href="{{image3UrlT5}}" target="_blank">
-					<img class="tile-image-grid-image" src="{{image3T5.filename}}">
+				{{#ifexists image3T6}}
+				<a href="{{image3UrlT6}}" target="_blank">
+					<img class="tile-image-grid-image" src="{{image3T6.filename}}">
 				</a>
 				{{/ifexists}}
-				{{#ifexists image4T5}}
-				<a href="{{image4UrlT5}}" target="_blank">
-					<img class="tile-image-grid-image" src="{{image4T5.filename}}">
+				{{#ifexists image4T6}}
+				<a href="{{image4UrlT6}}" target="_blank">
+					<img class="tile-image-grid-image" src="{{image4T6.filename}}">
 				</a>
 				{{/ifexists}}
 			</div>
+		</div>
+		{{/ifeq}}
+		
+		{{!-- Template 7: Video --}}
+		{{#ifeq template 7 }}
+		<div class="tile-tagline
+		{{#ifeq taglinePositionT7 'top'}}tile-position-top{{/ifeq}}
+		{{#ifeq taglinePositionT7 'center'}}tile-position-center{{/ifeq}}
+		{{#ifeq taglinePositionT7 'bottom'}}tile-position-bottom{{/ifeq}}		
+		{{#ifeq taglinePositionT7 'center-top'}}tile-position-center-top{{/ifeq}}
+		{{#ifeq taglinePositionT7 'center-bottom'}}tile-position-center-bottom{{/ifeq}}
+		">
+			{{taglineT7}}
+		</div>
+		<div class="tile-video-play" style="border-color:{{color}}">&#9658;</div>
+		<div class="tile-lightbox-overlay">
+			<div class="tile-lightbox">
+				<div class="tile-lightbox-close">close</div>
+				{{{videoT7}}}
+			</div>
+		</div>
+		{{/ifeq}}
+		
+		{{!-- Customized 8: Quickstart --}}
+		{{#ifeq template 8 }}
+		<div class="absolute-center" style="width:80%;font-size:1.2em;">
+			<div class="row" style="width:100%;">
+				<div class="col-xs-3 vcenter">
+					<img src="/images/quickstart-1.png" style="width:6vw;border:2px solid white;">
+				</div><!--
+				--><div class="col-xs-1 vcenter">
+					1.	
+				</div><!--
+				--><div class="col-xs-8 vcenter">
+					Take out your SUPA gear.
+				</div>	
+			</div>
+			<br>
+			<div class="row" style="width:100%;">
+				<div class="col-xs-3 vcenter">
+					<img src="/images/quickstart-2.png" style="width:6vw;border:2px solid white;">
+				</div><!--
+				--><div class="col-xs-1 vcenter">
+					2.	
+				</div><!--
+				--><div class="col-xs-8 vcenter">
+					Place Reactor on device.
+				</div>	
+			</div>
+			<br>
+			<div class="row" style="width:100%;">
+				<div class="col-xs-3 vcenter">
+					<img src="/images/quickstart-3.png" style="width:6vw;border:2px solid white;">
+				</div><!--
+				--><div class="col-xs-1 vcenter">
+					3.	
+				</div><!--
+				--><div class="col-xs-8 vcenter">
+					Apply wet wipes to skin below sensors for better reading.
+				</div>	
+			</div>
+			<br>
+			<div class="row" style="width:100%;">
+				<div class="col-xs-3 vcenter">
+					<img src="/images/quickstart-4.png" style="width:6vw;border:2px solid white;">
+				</div><!--
+				--><div class="col-xs-1 vcenter">
+					4.	
+				</div><!--
+				--><div class="col-xs-8 vcenter">
+					Put on your SUPA gear and get SUPA POWERED!
+				</div>	
+			</div>
+		</div>
+		{{/ifeq}}
+		
+		{{!-- Customized 9: Email Signup --}}
+		{{#ifeq template 9 }}
+		<div class="tile-tagline tile-position-center-top" style="width:80%;">
+			Sign up for SUPA news!
+		</div>	
+		<form class="tile-position-bottom" action="http://moondialgmbh.createsend.com/t/r/s/hujtkii/" method="post" id="subForm" style="width: 80%;">
+			<input class="tile-button" id="fieldEmail" name="cm-hujtkii-hujtkii" type="email" placeholder="your@email.here" required style="
+						color: {{backgroundColor}};
+						margin:0 auto;
+						width:100%;
+						outline: none;
+						text-align: center;"/>
+			<br>
+			<br>
+		  <button class="tile-button" type="submit" style="
+		  background-color: {{backgroundColor}};
+		  border-color: {{color}};
+		  color: {{color}};
+		  ">SIGN UP</button>
+		</form>
+		{{/ifeq}}
+		
+		{{!-- Customized 10: Contact Form --}}
+		{{!-- TODO Hook this up to google sheet / email --}}
+		{{#ifeq template 10 }}
+		<div class="tile-position-center" style="
+		width: 80%;
+		background-color: {{backgroundColor}};
+		color: {{backgroundColor}};
+		">
+			<input class="tile-input" type="text" placeholder="name" style="width:100%;">
+			<br><br>
+			<input class="tile-input" type="email" placeholder="your@email.here" style="width:100%;">
+			<br><br>
+			<textarea rows="3" class="tile-input" style="
+			width:100%;
+			height:10vw;
+			resize:none;
+			">Have a question?</textarea>
+			<br><br>
+			<button class="tile-button" style="
+			background-color: {{backgroundColor}};
+		  border-color: {{color}};
+		  color: {{color}};
+			">SUBMIT</button>
 		</div>
 		{{/ifeq}}
 		

@@ -21,9 +21,25 @@
 
 	</head>
 	<body>
+		
+		{{!--
+			//- jQuery 1.11.3 is included by default, and required by both Bootstrap
+			//- and the KeystoneJS Content Editor. If you are not targeting IE8,
+			//- you can upgrade to 2.1.4 (also bundled) for better performance.
+		--}}
+		<script src="/js/jquery/jquery-1.11.3.min.js"></script>
+		{{!--
+			//- Customise which Bootstrap javascript files are served by including
+			//- them specifically here, instead of bootstrap-3.3.5.min.js
+		--}}
+		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
+		<!-- custom JS helper -->
+		<script src="/js/index.js"></script>
+		
+		
 		<div id="header">
 			<div id="header-logo">
-				<img src="/images/supa-logo.svg"/ style="width:100px;">
+				<img src="/images/supa-logo.png"/ style="width:100px;">
 			</div>
 			<div id="header-nav">
 				<div class="header-nav-el">Shop</div>
@@ -99,17 +115,6 @@
 		</div>
 		<div id="footer">2017 &copy; SUPASPOT INC. All rights reserved.</div>
 
-		{{!--
-			//- jQuery 1.11.3 is included by default, and required by both Bootstrap
-			//- and the KeystoneJS Content Editor. If you are not targeting IE8,
-			//- you can upgrade to 2.1.4 (also bundled) for better performance.
-		--}}
-		<script src="/js/jquery/jquery-1.11.3.min.js"></script>
-		{{!--
-			//- Customise which Bootstrap javascript files are served by including
-			//- them specifically here, instead of bootstrap-3.3.5.min.js
-		--}}
-		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
 		{{{isAdminEditorJS user}}}
 	</body>
 </html>
