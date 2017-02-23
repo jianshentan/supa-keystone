@@ -5834,6 +5834,12 @@ body {
   padding-left: 40px;
   padding-right: 40px; }
 
+.header-nav-icon {
+  color: white;
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px; }
+
 #header-nav-newsletter {
   background-color: #06E2FF;
   height: 60px;
@@ -5864,8 +5870,33 @@ body {
 #splash-left {
   background-color: #FF044C; }
 
+.splash-left-image {
+  display: none;
+  margin: 0 auto;
+  width: 300px; }
+
+.splash-left-image.active {
+  display: block; }
+
 #splash-right {
   background-color: white; }
+
+.splash-right-image {
+  display: none;
+  margin: 0 auto;
+  width: 70%;
+  padding-left: 10%; }
+
+.splash-right-image.active {
+  display: block; }
+
+.splash-center-text,
+.splash-center-image {
+  display: none; }
+
+.splash-center-text.active,
+.splash-center-image.active {
+  display: block; }
 
 #splash-center-text {
   margin: 0 auto;
@@ -5884,8 +5915,12 @@ body {
   border-radius: 100px;
   width: 180px;
   height: 180px;
-  background-image: url("../images/splash-center-image.jpg");
-  margin: 0 auto; }
+  margin: 0 auto;
+  text-align: center; }
+
+#splash-center-image > img {
+  border-radius: 50%;
+  width: 100%; }
 
 /* TILES */
 .tile {
@@ -6040,6 +6075,47 @@ body {
   display: inline-block;
   vertical-align: middle;
   float: none; }
+
+/* FAQ */
+.faq-container {
+  margin-top: 80px; }
+
+.faq-section {
+  width: 100%;
+  margin-bottom: 20px; }
+
+.faq-section-header {
+  position: relative;
+  border-bottom: 3px solid #FF044C; }
+
+.faq-section-title {
+  color: #FF044C;
+  display: inline-block;
+  font-size: 1.8em; }
+
+.faq-section-sub-title {
+  color: #FF044C;
+  display: inline-block;
+  font-size: 1.2em; }
+
+.faq-section-toggle {
+  border-radius: 50%;
+  border: 3px solid #FF044C;
+  color: #FF044C;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 1.8em;
+  background-color: white;
+  padding-left: 1px;
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  cursor: pointer; }
+
+.faq-section-content {
+  display: none; }
 
 /* MAIN FONTS */
 @font-face {

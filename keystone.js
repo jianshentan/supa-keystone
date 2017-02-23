@@ -60,7 +60,8 @@ keystone.Email.defaults.templateEngine = require('handlebars');
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
 	users: 'users',
-	tiles: 'tiles'
+	tiles: 'tiles',
+	faqs: 'faqs'
 });
 
 // Start Keystone to connect to your database and initialise the web server

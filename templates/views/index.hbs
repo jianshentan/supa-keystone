@@ -142,7 +142,7 @@
 			<br>
 			<div class="tile-image-grid">
 				{{#ifexists image1T6}}
-				<a href="{{image1T6}}" target="_blank">
+				<a href="{{image1UrlT6}}" target="_blank">
 					<img class="tile-image-grid-image" src="{{image1T6.filename}}">
 				</a>
 				{{/ifexists}}
@@ -151,6 +151,7 @@
 					<img class="tile-image-grid-image" src="{{image2T6.filename}}">
 				</a>
 				{{/ifexists}}
+				<br>
 				{{#ifexists image3T6}}
 				<a href="{{image3UrlT6}}" target="_blank">
 					<img class="tile-image-grid-image" src="{{image3T6.filename}}">
@@ -243,7 +244,7 @@
 		<div class="tile-tagline tile-position-center-top" style="width:80%;">
 			Sign up for SUPA news!
 		</div>	
-		<form class="tile-position-bottom" action="http://moondialgmbh.createsend.com/t/r/s/hujtkii/" method="post" id="subForm" style="width: 80%;">
+		<form class="tile-position-center-bottom" action="http://moondialgmbh.createsend.com/t/r/s/hujtkii/" method="post" id="subForm" style="width: 80%;">
 			<input class="tile-button" id="fieldEmail" name="cm-hujtkii-hujtkii" type="email" placeholder="your@email.here" required style="
 						color: {{backgroundColor}};
 						margin:0 auto;
