@@ -13,7 +13,7 @@
 			{{#ifeq question1 true}}
 			<div class="h4">{{title1}}</div>
 			{{#ifexists answerImage1}}
-			<img src="{{answerImage1.filename}}" style="max-width: 100%"/><br><br>
+			<img src="{{answerImage1.secure_url}}" style="max-width: 100%"/><br><br>
 			{{/ifexists}}
 			<div class="">{{answerText1}}</div>
 			<br>
@@ -22,7 +22,7 @@
 			{{#ifeq question2 true}}
 			<div class="h4">{{title2}}</div>
 			{{#ifexists answerImage2}}
-			<img src="{{answerImage2.filename}}" style="max-width: 100%"/><br><br>
+			<img src="{{answerImage2.secure_url}}" style="max-width: 100%"/><br><br>
 			{{/ifexists}}
 			<div class="">{{answerText2}}</div>
 			<br>
@@ -31,7 +31,7 @@
 			{{#ifeq question3 true}}
 			<div class="h4">{{title3}}</div>
 			{{#ifexists answerImage3}}
-			<img src="{{answerImage3.filename}}" style="max-width: 100%"/><br><br>
+			<img src="{{answerImage3.secure_url}}" style="max-width: 100%"/><br><br>
 			{{/ifexists}}
 			<div class="">{{answerText3}}</div>
 			<br>
@@ -40,7 +40,7 @@
 			{{#ifeq question4 true}}
 			<div class="h4">{{title4}}</div>
 			{{#ifexists answerImage4}}
-			<img src="{{answerImage4.filename}}" style="max-width: 100%"/><br><br>
+			<img src="{{answerImage4.secure_url}}" style="max-width: 100%"/><br><br>
 			{{/ifexists}}
 			<div class="">{{answerText4}}</div>
 			<br>
@@ -49,7 +49,7 @@
 			{{#ifeq question5 true}}
 			<div class="h4">{{title5}}</div>
 			{{#ifexists answerImage5}}
-			<img src="{{answerImage5.filename}}" style="max-width: 100%"/><br><br>
+			<img src="{{answerImage5.secure_url}}" style="max-width: 100%"/><br><br>
 			{{/ifexists}}
 			<div class="">{{answerText5}}</div>
 			<br>
@@ -58,7 +58,7 @@
 			{{#ifeq question6 true}}
 			<div class="h4">{{title6}}</div>
 			{{#ifexists answerImage6}}
-			<img src="{{answerImage6.filename}}" style="max-width: 100%"/><br><br>
+			<img src="{{answerImage6.secure_url}}" style="max-width: 100%"/><br><br>
 			{{/ifexists}}
 			<div class="">{{answerText6}}</div>
 			<br>
@@ -68,7 +68,7 @@
 	
 	<!--
 	<div class="tile col-xs-6" style="
-		background-image: url('{{backgroundImage.filename}}');
+		background-image: url('{{backgroundImage.secure_url}}');
 		background-color:{{backgroundColor}};
 		color:{{color}};">
 		

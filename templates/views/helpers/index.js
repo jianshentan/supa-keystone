@@ -31,7 +31,7 @@ module.exports = function () {
 	// standard hbs if-exists check, pass in one value from template
 	// {{#ifexists keyToCheck}} [requires an else blockin template regardless]
 	_helpers.ifexists = function (a, options) {
-		if (a.size !== undefined) {
+		if (a.secure_url !== undefined) {
 			return options.fn(this);
 		} else {
 			return options.inverse(this);

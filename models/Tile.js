@@ -13,16 +13,6 @@ var Tile = new keystone.List('Tile', {
 	plural: 'Tiles'
 });
 
-// guide: https://github.com/keystonejs/keystone/tree/master/lib/storage
-var localStorage = new keystone.Storage({
-	adapter: keystone.Storage.Adapters.FS,
-	fs: {
-		path: 'uploads',
-		publicPath: '/uploads'
-		//generateFilename: keystoneStorageNameFunctions.originalFilename
-	}
-})
-
 Tile.add(
 	"Tile",
 	{
@@ -30,7 +20,7 @@ Tile.add(
 		// default
 		color: { type: Types.Color, required: true, default: '#000000' },
 		backgroundColor: { type: Types.Color, required: true, default: "#FFFFFF" },
-		backgroundImage: { type: Types.File, storage: localStorage },
+		backgroundImage: { type: Types.CloudinaryImage },
 		topLeftText: { type: Types.Text },
 		topRightText: { type: Types.Text },
 		bottomLeftText: { type: Types.Text },
@@ -114,8 +104,7 @@ Tile.add(
 		imageT3: { 
 			dependsOn: { template: 3 },
 			label: "Image",
-			type: Types.File, 
-			storage: localStorage
+			type: Types.CloudinaryImage
 		},
 		imagePositionT3: {
 			dependsOn: { template: 3 },
@@ -148,8 +137,7 @@ Tile.add(
 		imageT4: { 
 			dependsOn: { template: 4 },
 			label: "Image",
-			type: Types.File, 
-			storage: localStorage
+			type: Types.CloudinaryImage
 		},
 		imagePositionT4: {
 			dependsOn: { template: 4 },
@@ -197,8 +185,7 @@ Tile.add(
 		image1T6: {
 			dependsOn: { template: 6 },
 			label: "Image 1",
-			type: Types.File, 
-			storage: localStorage
+			type: Types.CloudinaryImage
 		},
 		image1UrlT6: {
 			dependsOn: { template: 6 },
@@ -208,8 +195,7 @@ Tile.add(
 		image2T6: {
 			dependsOn: { template: 6 },
 			label: "Image 2",
-			type: Types.File, 
-			storage: localStorage
+			type: Types.CloudinaryImage
 		},
 		image2UrlT6: {
 			dependsOn: { template: 6 },
@@ -219,8 +205,7 @@ Tile.add(
 		image3T6: {
 			dependsOn: { template: 6 },
 			label: "Image 3",
-			type: Types.File, 
-			storage: localStorage
+			type: Types.CloudinaryImage
 		},
 		image3UrlT6: {
 			dependsOn: { template: 6 },
@@ -230,8 +215,7 @@ Tile.add(
 		image4T6: {
 			dependsOn: { template: 6 },
 			label: "Image 4",
-			type: Types.File, 
-			storage: localStorage
+			type: Types.CloudinaryImage
 		},
 		image4UrlT6: {
 			dependsOn: { template: 6 },

@@ -13,16 +13,6 @@ var Faq = new keystone.List('Faq', {
 	plural: 'FAQs'
 });
 
-// guide: https://github.com/keystonejs/keystone/tree/master/lib/storage
-var localStorage = new keystone.Storage({
-	adapter: keystone.Storage.Adapters.FS,
-	fs: {
-		path: 'uploads',
-		publicPath: '/uploads'
-		//generateFilename: keystoneStorageNameFunctions.originalFilename
-	}
-})
-
 Faq.add(
 	"FAQ", 
 	{
@@ -44,8 +34,7 @@ Faq.add(
 		answerImage1: {
 			dependsOn: { question1: true },
 			label: "Answer Image",
-			type: Types.File, 
-			storage: localStorage
+			type: Types.CloudinaryImage
 		},
 		answerText1: {
 			dependsOn: { question1: true },
@@ -66,8 +55,7 @@ Faq.add(
 		answerImage2: {
 			dependsOn: { question2: true },
 			label: "Answer Image",
-			type: Types.File, 
-			storage: localStorage
+			type: Types.CloudinaryImage
 		},
 		answerText2: {
 			dependsOn: { question2: true },
@@ -88,8 +76,7 @@ Faq.add(
 		answerImage3: {
 			dependsOn: { question3: true },
 			label: "Answer Image",
-			type: Types.File, 
-			storage: localStorage
+			type: Types.CloudinaryImage
 		},
 		answerText3: {
 			dependsOn: { question3: true },
@@ -110,8 +97,7 @@ Faq.add(
 		answerImage4: {
 			dependsOn: { question4: true },
 			label: "Answer Image",
-			type: Types.File, 
-			storage: localStorage
+			type: Types.CloudinaryImage
 		},
 		answerText4: {
 			dependsOn: { question4: true },
@@ -132,8 +118,7 @@ Faq.add(
 		answerImage5: {
 			dependsOn: { question5: true },
 			label: "Answer Image",
-			type: Types.File, 
-			storage: localStorage
+			type: Types.CloudinaryImage
 		},
 		answerText5: {
 			dependsOn: { question5: true },
@@ -154,8 +139,7 @@ Faq.add(
 		answerImage6: {
 			dependsOn: { question6: true },
 			label: "Answer Image",
-			type: Types.File, 
-			storage: localStorage
+			type: Types.CloudinaryImage
 		},
 		answerText6: {
 			dependsOn: { question6: true },
