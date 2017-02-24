@@ -5827,6 +5827,9 @@ body {
   min-width: 960px;
   overflow-y: auto; }
 
+#body {
+  min-height: calc(100vh - 140px); }
+
 /* UTILITY CLASSES */
 .absolute-center {
   position: absolute;

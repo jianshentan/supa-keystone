@@ -5,7 +5,6 @@ var Types = keystone.Field.Types;
  * User Model
  * ==========
  */
-var User = new keystone.List('User');
 var Faq = new keystone.List('Faq', {
 	autokey: { path: 'slug', from: 'title', unique: true },
 	sortable: true,	

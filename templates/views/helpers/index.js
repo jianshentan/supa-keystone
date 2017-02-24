@@ -37,6 +37,14 @@ module.exports = function () {
 			return options.inverse(this);
 		}
 	};
+	
+	_helpers.validUrl = function(url, options) {
+		if (url.path !== undefined) {
+			return options.fn(this);
+		} else {
+			return options.inverse(this);
+		}
+	};
 
 	/**
 	 * Port of Ghost helpers to support cross-theming

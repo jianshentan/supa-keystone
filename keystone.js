@@ -61,7 +61,8 @@ keystone.Email.defaults.templateEngine = require('handlebars');
 keystone.set('nav', {
 	users: 'users',
 	tiles: 'tiles',
-	faqs: 'faqs'
+	faqs: 'faqs',
+	documents: 'documents'
 });
 
 // Start Keystone to connect to your database and initialise the web server
