@@ -6,6 +6,8 @@ $supa-blue: #06E2FF;
 body {
 	font-family: Poppins;
 	font-weight: 400;
+	min-width: 960px;
+  overflow-y: auto;
 }
 
 /* UTILITY CLASSES */
@@ -26,7 +28,9 @@ body {
 	width: 100%;
 	border-bottom: $border-width solid white;
 	z-index: 1000;
-} #header-logo{
+	min-width: 960px;
+} 
+#header-logo{
 	display: inline-block;
 	line-height: 60px;
 	margin-left: 20px;
@@ -308,6 +312,7 @@ body {
 	color: $supa-red;
 	display: inline-block;
 	font-size: 1.8em;
+	cursor: pointer;
 }
 .faq-section-sub-title {
 	color: $supa-red;
@@ -329,6 +334,18 @@ body {
 	right: 0px;
 	top: 20px;
 	cursor: pointer;
+}
+.faq-section-toggle.open{
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  
+  -webkit-transition: 300ms ease all;
+  -moz-transition: 300ms ease all;
+  -o-transition: 300ms ease all;
+  transition: 300ms ease all;
 }
 .faq-section-content {
 	display: none;

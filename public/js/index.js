@@ -5,7 +5,7 @@ $(document).ready(function() {
    * ---------------------- */
   var color = ["#FED202", "#06E2FF", "#FF044C"]; // yellow, blue, red
   setInterval(function() {
-    useNext(".splash-left-image");
+    // useNext(".splash-left-image");
     useNext(".splash-center-image");
     useNext(".splash-center-text");
     useNext(".splash-right-image");
@@ -47,10 +47,11 @@ $(document).ready(function() {
   /* ----------------------
    * FAQ Interactions
    * ---------------------- */ 
-  $(".faq-section-toggle").each(function() {
+  $(".faq-section-toggle, .faq-section-title").each(function() {
     $(this).click(function() {
       var content = $(this).parent().next(".faq-section-content");
       content.slideToggle();
+      $(this).parent().find(".faq-section-toggle").toggleClass("open");
     });
   });
 });
