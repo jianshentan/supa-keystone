@@ -22,9 +22,13 @@ Tile.add(
 		backgroundColor: { type: Types.Color, required: true, default: "#FFFFFF" },
 		backgroundImage: { type: Types.CloudinaryImage },
 		topLeftText: { type: Types.Text },
+		topLeftUrl: { type: Types.Url },
 		topRightText: { type: Types.Text },
+		topRightUrl: { type: Types.Url },
 		bottomLeftText: { type: Types.Text },
+		bottomLeftUrl: { type: Types.Url },
 		bottomRightText: { type: Types.Text },
+		bottomRightUrl: { type: Types.Url },
 		// template selection
 		template: { 
 			type: Types.Select, 
@@ -34,7 +38,7 @@ Tile.add(
 								{ value: 2, label: 'Template: Tagline + Button'},
 								{ value: 3, label: 'Template: Image + Button'},
 								{ value: 4, label: 'Template: Image + Tagline'},
-								{ value: 5, label: 'Template: Tagline + Body Text'},
+								{ value: 5, label: 'Template: Tagline + Body Text + Button'},
 								{ value: 6, label: 'Template: Tagline + Image Grid'},
 								{ value: 7, label: 'Template: Video'},
 								{ value: 8, label: 'Custom: Quickstart'},
@@ -160,7 +164,7 @@ Tile.add(
 		},
 	},
 	// header for Template 5
-	{ heading: "Template: Tagline + Body Text", dependsOn: { template: 5 } },
+	{ heading: "Template: Tagline + Body Text + Button", dependsOn: { template: 5 } },
 	{
 		taglineT5: { 
 			dependsOn: { template: 5 },
@@ -172,6 +176,29 @@ Tile.add(
 			label: "Body Html",
 			type: Types.Html,
 			wysiwyg: true
+		},
+		buttonBoolT5: {
+			dependsOn: { template: 5 },
+			type: Types.Boolean,
+			label: "Add Button",
+			default: false
+		},
+		buttonTextT5: { 
+			dependsOn: { template: 5, buttonBoolT5: true },
+			label: "Button Text",
+			type: Types.Text
+		},
+		buttonUrlT5: { 
+			dependsOn: { template: 5, buttonBoolT5: true },
+			label: "Button URL",
+			type: Types.Url
+		},
+		buttonPositionT5: {
+			dependsOn: { template: 5 , buttonBoolT5: true},
+			label: "Button Position",
+			type: Types.Select,
+			options: 'top, center-top, center, center-bottom, bottom',
+			default: 'center'	
 		}
 	},
 	// header for Template 6

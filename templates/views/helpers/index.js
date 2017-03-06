@@ -39,7 +39,8 @@ module.exports = function () {
 	};
 	
 	_helpers.validUrl = function(url, options) {
-		if (url.path !== undefined) {
+		
+		if (url !== undefined && url !== "") {
 			return options.fn(this);
 		} else {
 			return options.inverse(this);

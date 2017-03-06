@@ -6,7 +6,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>supa</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		
 		<link href="/styles/site.css" rel="stylesheet">
+		{{#ifeq mobile 'true'}}
+		<link href="/styles/msite.css" rel="stylesheet">
+		{{/ifeq}}
 
 		{{!-- This file provides the default styling for the KeystoneJS Content Editor
 			- only renders when user is logged in and admin--}}
@@ -22,37 +26,60 @@
 	</head>
 	<body>
 		
-		{{!--
-			//- jQuery 1.11.3 is included by default, and required by both Bootstrap
-			//- and the KeystoneJS Content Editor. If you are not targeting IE8,
-			//- you can upgrade to 2.1.4 (also bundled) for better performance.
-		--}}
+		<!-- set the is mobile variable -->
+		<script>var mobile = {{mobile}};</script>
+		
 		<script src="/js/jquery/jquery-1.11.3.min.js"></script>
-		{{!--
-			//- Customise which Bootstrap javascript files are served by including
-			//- them specifically here, instead of bootstrap-3.3.5.min.js
-		--}}
 		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
 		<!-- custom JS helper -->
 		<script src="/js/index.js"></script>
 		
-		
+		{{#ifeq mobile 'false'}}
 		<div id="header">
 			<div id="header-logo">
-				<img src="/images/supa-logo.png"/ style="width:100px;">
+				<a href="/"><img src="/images/supa-logo.png"></a>
 			</div>
 			<div id="header-nav">
-				<div class="header-nav-el">Shop</div>
-				<div class="header-nav-el">FAQ</div>
-				<div class="header-nav-el">Contact</div>
+				<div class="header-nav-el"><a href="shop.supa.ai">Shop</a></div>
+				<div class="header-nav-el"><a href="/faq">FAQ</a></div>
+				<!--<div class="header-nav-el">Contact</div>-->
 				<div id="header-nav-newsletter" class="header-nav-el">
-					<div class="header-nav-icon"><img src="/images/facebook.png" style="width:30px;"></div>					
-					<div class="header-nav-icon"><img src="/images/instagram.png" style="width:30px;"></div>					
-					<div class="header-nav-icon"><img src="/images/twitter.png" style="width:30px;"></div>					
-					<div class="header-nav-icon"><img src="/images/snapchat.png" style="width:30px;"></div>					
+					<div class="header-nav-icon"><a href="" target="_blank"><img src="/images/facebook.png" style="width:30px;"></a></div>					
+					<div class="header-nav-icon"><a href="http://www.instagram.com/supa.ai" target="_blank"><img src="/images/instagram.png" style="width:30px;"></a></div>					
+					<div class="header-nav-icon"><a href="http://www.twitter.com/supa_ai" target="_blank"><img src="/images/twitter.png" style="width:30px;"></a></div>					
+					<div class="header-nav-icon"><a href="http://www.snapchat.com/add/supa.ai" target="_blank"><img src="/images/snapchat.png" style="width:30px;"></a></div>					
 				</div>
 			</div>
 		</div>
+		{{/ifeq}}
+		
+		{{#ifeq mobile 'true'}}
+		<div id="header"></div>
+		<div id="header-logo">
+			<a href="/"><img src="/images/supa-logo.png"></a>
+		</div>
+		<div id="hamburger" class="header-navigation-action active">&#9776;</div>
+		<div id="close-hamburger" class="header-navigation-action">&#x2715;</div>
+		<div id="navigation-overlay">
+			<div class="navigation-header">
+				<div class="absolute-center" style="width:100%;">
+					<div id="navigation-contact" class="h1">Contact</div><br>
+					<div id="navigation-shop" class="h1">Shop</div><br>
+					<div id="navigation-faq" class="h1">FAQ</div><br>
+					<div id="navigation-faq" class="h1">Download App</div>	
+				</div>
+			</div>
+			<div class="navigation-footer">
+				<div class="row" style="width:80vw;margin-left:10vw;padding-top:12.5vw;">
+					<div class="col-xs-3"><a href="" target="_blank"><img src="/images/facebook.png"></a></div>
+					<div class="col-xs-3"><a href="" target="_blank"><img src="/images/instagram.png"></a></div>
+					<div class="col-xs-3"><a href="" target="_blank"><img src="/images/twitter.png"></a></div>
+					<div class="col-xs-3"><a href="" target="_blank"><img src="/images/snapchat.png"></a></div>
+				</div>
+			</div>
+		</div>
+		{{/ifeq}}
+		
 		<!--
 		<div id="header">
 			<div class="container">
@@ -118,7 +145,7 @@
 			<!-- The content block should contain the body of your template's content-->
 			{{{body}}}
 		</div>
-		<div id="footer">2017 &copy; SUPASPOT INC. All rights reserved.</div>
+		<div id="footer">2014 - 2017 &copy; SUPAspot Inc. All rights reserved.</div>
 
 		{{{isAdminEditorJS user}}}
 	</body>

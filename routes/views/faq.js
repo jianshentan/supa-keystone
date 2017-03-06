@@ -12,6 +12,12 @@ exports = module.exports = function (req, res) {
 	// Load FAQs by sort-order
 	view.query('faqs', keystone.list('Faq').model.find().sort('sortOrder'));
 
-	// Render the view
+	if (req.isMobile) {
+		locals.mobile = 'true';
+	} else {
+		locals.mobile = 'false';
+	}
+	
 	view.render('faq');
+
 };

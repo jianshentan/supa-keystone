@@ -35,29 +35,10 @@ var routes = {
 // Setup Route Bindings
 exports = module.exports = function (app) {
 	// Views
-	app.get('/', routes.views.index);
-	app.get('/faq', routes.views.faq);
-	app.get('/:document', routes.views.document);
+	app.get('/', middleware.checkMobile, routes.views.index);
+	app.get('/faq', middleware.checkMobile, routes.views.faq);
+	app.get('/:document', middleware.checkMobile, routes.views.document);
 	
-	/*
-	exports = module.exports = function (req, res) {
-	
-		var view = new keystone.View(req, res);
-		var locals = res.locals;
-	
-		// locals.section is used to set the currently selected
-		// item in the header navigation.
-		locals.section = 'faq';
-		
-		// Load FAQs by sort-order
-		view.query('faqs', keystone.list('Faq').model.find().sort('sortOrder'));
-	
-		// Render the view
-		view.render('faq');
-	};
-	*/
-
-
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
 

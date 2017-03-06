@@ -11,7 +11,12 @@ exports = module.exports = function (req, res) {
 	
 	// Load document 
 	view.query('document', keystone.list('Document').model.findOne({ 'path': req.url.substring(1) }));
-
-	// Render the view
+	
+	if (req.isMobile) {
+		locals.mobile = "true";
+	} else {
+		locals.mobile = "false";
+	}
+	
 	view.render('document');
 };

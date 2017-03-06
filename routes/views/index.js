@@ -11,7 +11,14 @@ exports = module.exports = function (req, res) {
 	
 	// Load Tiles by sort-order
 	view.query('tiles', keystone.list('Tile').model.find().sort('sortOrder'));
+	
+	if (req.isMobile) {
+		locals.mobile = 'true';
+		locals.colwidth = 'col-xs-12';
+	} else {
+		locals.mobile = 'false';
+		locals.colwidth = 'col-xs-6';
+	}
 
-	// Render the view
 	view.render('index');
 };

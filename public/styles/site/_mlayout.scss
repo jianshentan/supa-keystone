@@ -1,0 +1,164 @@
+$border-width: 3px;
+$double-border-width: 6px;
+$supa-red: #FF044C;
+$supa-blue: #06E2FF;
+
+body {
+	font-family: Poppins;
+	width: 100vw;
+	min-width: 100vw;
+}
+#body {
+  min-height: calc(100vh - 8vh - 60px);
+}
+
+.h1 {
+	font-weight: 500;
+}
+#header {
+	min-width: 100vw;
+	width: 100vw;
+	height: 6vh !important;
+	border-bottom: $border-width solid white;
+	z-index: 1000;
+}
+#header-logo {
+	line-height: 6vh !important;
+	margin-left: 2vw;
+	margin-right: 2vw;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	z-index: 1100;
+}
+#header-logo img {
+	height: 3vh;
+	width: inherit;
+}
+.header-navigation-action {
+	position: fixed;
+	color: white;	
+	line-height: 6vh;
+	z-index: 1001;
+	display: inline-block;
+	top: 0px;
+	right: 2vw;
+	font-size: 1.8em;
+	z-index: 1100;
+	display: none;
+}
+.header-navigation-action.active {
+	display: inline-block;
+}
+#navigation-overlay {
+	display: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
+  background: #06E2FF;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+	z-index: 1001;
+	text-align: center;
+	color: white;
+}
+#navigation-overlay.active {
+	display: block;
+}
+.navigation-header {
+	height: calc(80vh - 3px);
+	width: 100vw;
+	position: relative;
+	border-bottom: $double-border-width solid white;
+}
+.navigation-footer {
+	background-color: $supa-red;
+	height: 20vh;
+	width: 100vw;
+}
+.navigation-footer img {
+	width: 10vw;
+}
+
+/* Splash */
+#splash {
+	margin-top: 6vh;
+	height: 90vh;
+	width: 100vw;
+	background-color: $supa-red;
+	color: white;
+	padding: 10vw;
+	text-align: center;
+}
+
+/* tiles */
+.tile {
+	height: 100vw;
+	border-left: 0px !important;
+	border-right: 0px !important;
+}
+.tile-input {
+	font-size: 5vw;
+	padding: 1.0vw 3vw;
+	margin-bottom: 3vw;
+}
+textarea.tile-input {
+	height: 20vw;
+}
+.tile-image-grid-image {
+	width: 32vw;
+}
+.tile-quickstart {
+	font-size: 3.5vw;
+}
+.tile-quickstart .row {
+	margin: 0px;
+}
+.tile-quickstart-col {
+	padding: 0px;
+}
+.tile-quickstart-image {
+	width: 65%;
+}
+.tile-video-play {
+	line-height: inherit !important;
+	padding-top: 6px;
+}
+.tile-wide {
+	width: 80%;
+}
+
+/* faq */
+.faq-container {
+	margin-top: 8vh;
+}
+
+/* MAIN FONTS */
+@font-face {
+  font-family: Poppins;
+  src:  url('../fonts/Poppins-SemiBold.eot') format('eot'),
+        url('../fonts/Poppins-SemiBold.woff') format('woff'),
+        url('../fonts/Poppins-SemiBold.ttf') format('truetype'),
+        url('../fonts/Poppins-SemiBold.svg') format('svg');
+  font-style: none;
+}
+@font-face {
+  font-family: Poppins;
+  src:  url('../fonts/Poppins-Bold.eot') format('eot'),
+        url('../fonts/Poppins-Bold.woff') format('woff'),
+        url('../fonts/Poppins-Bold.ttf') format('truetype'),
+        url('../fonts/Poppins-Bold.svg') format('svg');
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+

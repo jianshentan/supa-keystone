@@ -1,46 +1,73 @@
+{{#ifeq mobile 'true'}}
+<div id="splash">
+	<div id="splash-tagline" style="font-size:1.2em;">
+		Your new partner in health and fitness. < < The Tagline that tags your lines. > >
+	</div>
+	<br><br>
+	<img src="/images/splash-left-image-1.png" style="width:80%;">
+	<br><br><br><br>
+	<div class="tile-button" style="font-size:7vw;">GET THE APP!</div>
+</div>
+{{/ifeq}}
+
+{{#ifeq mobile 'false'}}
 <div id="splash">
 	<div class="row" style="margin:0px;">
-		<div id="splash-left" class="splash-section col-xs-6">
-			<div class="absolute-center" style="width:80%;text-align:center;">
-				<div class="row" style="width:100%;color:white;">
-					<div class="col-xs-2">
-						<img src="/images/supa-icon.svg" style="width:100%;">
-					</div>
-					<div class="col-xs-10" style="font-size:1.2em;">
+		<div id="splash-left" class="splash-section col-xs-6" style="padding:0px;">
+			<div class="splash-left-top" style="background-image: url('/images/splash-left-image-bg.jpg"></div>
+			<div class="splash-left-bottom" style="position:relative;">
+				<div class="absolute-center" style="width:80%;text-align:center;">
+					<div style="margin-left:10%;width:80%;color:white;font-size:1.2em;">
 						Your new partner in health and fitness. < < The Tagline that tags your lines. > >
 					</div>	
+					<!--
+					<br><br>
+					<div>
+						<img class="splash-left-image active" src="/images/splash-left-image-1.png">
+						<img class="splash-left-image" src="/images/splash-left-image-2.png">
+						<img class="splash-left-image" src="/images/splash-left-image-3.png">
+					</div>
+					-->
+					<br><br>
+					<div class="splash-left-button">
+						<a href="" style="color:white;"><em>PREORDER!</em></a>
+					</div>
+					<!--
+					<br><br>
+					<img src="/images/supa-logo.png" style="width:80px;">
+					-->
 				</div>
-				<br><br>
-				<div>
-					<img class="splash-left-image active" src="/images/splash-left-image-1.png">
-					<img class="splash-left-image" src="/images/splash-left-image-2.png">
-					<img class="splash-left-image" src="/images/splash-left-image-3.png">
-				</div>
-				<br><br>
-				<div style="color:white;border:3px solid white;padding:10px 40px;display:inline-block;font-size:1.8em;font-weight:bold;">
-					<em>PREORDER!</em>
-				</div>
-				<br><br>
-				<img src="/images/supa-logo.png" style="width:80px;">
-			</div>		
+			</div>
 		</div>
-		<div id="splash-right" class="splash-section col-xs-6">
-			<div class="absolute-center" style="width:80%;text-align:center;">
-				<img class="splash-right-image active" src="/images/splash-right-image-1.png">
-				<img class="splash-right-image" src="/images/splash-right-image-2.png">
-				<img class="splash-right-image" src="/images/splash-right-image-3.png">
+		<div id="splash-right" class="splash-section col-xs-6" style="padding:0px;">
+			<div class="absolute-center" style="width:100%;text-align:center;">
+				<img class="splash-right-image-bg" src="/images/splash-right-image-bg.jpg">
+			</div>
+			<div class="absolute-center" style="width:100%;text-align:center;">
+				<img class="splash-right-image active" src="/images/splash-right-image-1.jpg">
+				<img class="splash-right-image" src="/images/splash-right-image-2.jpg">
+				<img class="splash-right-image" src="/images/splash-right-image-3.jpg">
+				<img class="splash-right-image" src="/images/splash-right-image-4.jpg">
+				<img class="splash-right-image" src="/images/splash-right-image-5.jpg">
 			</div>
 		</div>
 	</div>
 	<div id="splash-center" class="absolute-center">
-		<div class="splash-center-text active" id="splash-center-text">Sabine is racing to the train.</div>		
-		<div class="splash-center-text" id="splash-center-text">Sabine less intense.</div>		
-		<div class="splash-center-text" id="splash-center-text">Sabine is a chillpill.</div>		
+		<div style="position:absolute;left:50%;transform:translateX(-50%);top:-35%;">
+			<div class="splash-center-text active" id="splash-center-text">Sleeping.<br>Zzz...</div>		
+			<div class="splash-center-text" id="splash-center-text">Listening<br>to music</div>		
+			<div class="splash-center-text" id="splash-center-text">Running up the subway stairs.</div>		
+			<div class="splash-center-text" id="splash-center-text">Doing 100 push ups.</div>		
+			<div class="splash-center-text" id="splash-center-text">Sunset surfing in Rockaway.</div>		
+		</div>
 		<br>
 		<div id="splash-center-image">
-			<img class="splash-center-image active" src="/images/splash-center-image-1.jpg">
-			<img class="splash-center-image" src="/images/splash-center-image-2.jpg">
-			<img class="splash-center-image" src="/images/splash-center-image-3.jpg">
+			<img class="splash-center-image active" src="/images/splash-center-image-1.png">
+			<img class="splash-center-image" src="/images/splash-center-image-2.png">
+			<img class="splash-center-image" src="/images/splash-center-image-3.png">
+			<img class="splash-center-image" src="/images/splash-center-image-4.png">
+			<img class="splash-center-image" src="/images/splash-center-image-5.png">
 		</div>
 	</div>
 </div>
+{{/ifeq}}
