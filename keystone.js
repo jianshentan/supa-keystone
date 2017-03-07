@@ -1,6 +1,6 @@
 // Simulate config options from your production environment by
 // customising the .env file in your project's root folder.
-require('dotenv').config();
+// require('dotenv').config();
 
 // Require keystone
 var keystone = require('keystone');
@@ -34,6 +34,9 @@ keystone.init({
 	'user model': 'User'
 });
 
+keystone.set('cloudinary config', process.env.CLOUDINARY_URL );
+
+
 // Load your project's Models
 keystone.import('models');
 
@@ -46,6 +49,7 @@ keystone.set('locals', {
 	utils: keystone.utils,
 	editable: keystone.content.editable,
 });
+
 
 // Load your project's Routes
 keystone.set('routes', require('./routes'));
