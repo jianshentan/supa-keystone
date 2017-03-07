@@ -2,7 +2,7 @@
   "name": "supa",
   "version": "0.0.0",
   "private": true,
-  "engine": { 
+  "engines": { 
     "node": "4.3.0",
     "npm": "2.11.2"
   },
