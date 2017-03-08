@@ -10,5 +10,5 @@
 
 ## Update code (do not make changes on the ec2 instance):
 1. clone from github (git clone ...)
-2. stop all processes in forever (forever stopall)
+2. stop all processes in forever (sudo forever stopall)
 3. run keystone webapp with forever: (sudo forever start keystone.js)
