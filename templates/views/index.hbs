@@ -239,7 +239,7 @@
 					2.	
 				</div><!--
 				--><div class="col-xs-8 tile-quickstart-col vcenter">
-					Place Reactor on gear.
+					Snap SUPA Reactor onto SUPA Connector.
 				</div>	
 			</div>
 			<br>
@@ -251,7 +251,7 @@
 					3.	
 				</div><!--
 				--><div class="col-xs-8 tile-quickstart-col vcenter">
-					Apply wet wipes to skin below sensors for better reading.
+					Slightly wet your skin below sensors for better reading.
 				</div>	
 			</div>
 			<br>
@@ -292,17 +292,19 @@
 		color: {{backgroundColor}};
 		">
 			<br>
-			<input class="tile-input" type="text" placeholder="name" style="width:100%;">
-			<br>
-			<input class="tile-input" type="email" placeholder="your@email.here" style="width:100%;">
-			<br>
-			<textarea rows="3" class="tile-input">Any Suggestions?</textarea>
-			<br>
-			<button class="tile-button" style="
-			background-color: {{backgroundColor}};
-		  border-color: {{color}};
-		  color: {{color}};
-			">SUBMIT</button>
+			<form id="tile-contact-form">
+				<input name="name" class="tile-input" type="text" placeholder="name" style="width:100%;">
+				<br>
+				<input name="email" class="tile-input" type="email" placeholder="your@email.here" style="width:100%;">
+				<br>
+				<textarea name="message" rows="3" class="tile-input">Any Suggestions?</textarea>
+				<br>
+				<button class="tile-button" type="submit" style="
+				background-color: {{backgroundColor}};
+			  border-color: {{color}};
+			  color: {{color}};
+				">SUBMIT</button>
+			</form>
 		</div>
 		{{/ifeq}}
 		
