@@ -171,6 +171,13 @@ Tile.add(
 			label: "Tagline",
 			type: Types.Text
 		},
+		taglinePositionT5: {
+			dependsOn: { template: 5 },
+			label: "Tagline Position",
+			type: Types.Select,
+			options: 'top, center-top, center, center-bottom, bottom',
+			default: 'center'	
+		},
 		bodyHtmlT5: {
 			dependsOn: { template: 5 },
 			label: "Body Html",

@@ -84,7 +84,7 @@ body {
 /* Splash */
 #splash {
 	margin-top: 6vh;
-	height: 90vh;
+	height: 95vh;
 	width: 100vw;
 	background-color: $supa-red;
 	color: white;
@@ -127,6 +127,24 @@ textarea.tile-input {
 }
 .tile-wide {
 	width: 80%;
+}
+.tile-position-top {
+	top: 8%;
+}
+.tile-position-center-top {
+	top: 20%;
+}
+.tile-position-center-bottom {
+	bottom: 20%;
+}
+.tile-position-bottom {
+	bottom: 8%;
+}
+.tile-quickstart {
+	top: 55% !important;
+}
+.tile-html {
+	top: 40% !important;
 }
 
 /* faq */

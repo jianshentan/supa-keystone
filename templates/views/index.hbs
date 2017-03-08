@@ -128,11 +128,16 @@
 		
 		{{!-- Template 5: Tagline + Body Text + Button --}}
 		{{#ifeq template 5 }}
-		<div class="tile-wide absolute-center">
-			<div class="tile-tagline">
-				{{taglineT5}}
-			</div>
-			<br>
+		<div class="tile-tagline
+		{{#ifeq taglinePositionT5 'top'}}tile-position-top{{/ifeq}}
+		{{#ifeq taglinePositionT5 'center'}}tile-position-center{{/ifeq}}
+		{{#ifeq taglinePositionT5 'bottom'}}tile-position-bottom{{/ifeq}}		
+		{{#ifeq taglinePositionT5 'center-top'}}tile-position-center-top{{/ifeq}}
+		{{#ifeq taglinePositionT5 'center-bottom'}}tile-position-center-bottom{{/ifeq}}
+		">
+			{{taglineT5}}
+		</div>
+		<div class="tile-wide absolute-center tile-html">
 			<div class="tile-html" style="
 				display: inline-block;
 				color:{{color}};">
@@ -202,7 +207,7 @@
 		">
 			{{taglineT7}}
 		</div>
-		<div class="tile-video-play" style="border-color:{{color}}">&#9658;</div>
+		<div class="tile-video-play" style="border-color:{{color}}"><img src="/images/tile-play-button.png"></div>
 		<div class="tile-lightbox-overlay">
 			<div class="tile-lightbox">
 				<div class="tile-lightbox-close">close</div>
@@ -266,11 +271,6 @@
 		
 		{{!-- Customized 9: Email Signup --}}
 		{{#ifeq template 9 }}
-		<!--
-		<div class="tile-tagline tile-wide tile-position-top">
-			Sign up for SUPA news!
-		</div>	
-		-->
 		<form class="tile-position-center-bottom" action="http://moondialgmbh.createsend.com/t/r/s/hujtkii/" method="post" id="subForm" style="width: 80%;">
       <input class="tile-input" id="fieldName" name="cm-name" placeholder="Your Name" type="text" style="color:{{backgroundColor}}; width:100%;"/>
 			<input class="tile-input" id="fieldEmail" name="cm-hujtkii-hujtkii" type="email" placeholder="your@email.here" required style="color:{{backgroundColor}}; width:100%;">
@@ -291,11 +291,12 @@
 		background-color: {{backgroundColor}};
 		color: {{backgroundColor}};
 		">
+			<br>
 			<input class="tile-input" type="text" placeholder="name" style="width:100%;">
 			<br>
 			<input class="tile-input" type="email" placeholder="your@email.here" style="width:100%;">
 			<br>
-			<textarea rows="3" class="tile-input">Have a question or suggestion? What sports do you play?</textarea>
+			<textarea rows="3" class="tile-input">Any Suggestions?</textarea>
 			<br>
 			<button class="tile-button" style="
 			background-color: {{backgroundColor}};

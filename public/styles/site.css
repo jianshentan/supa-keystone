@@ -5866,8 +5866,8 @@ body {
 .header-nav-el {
   color: white;
   display: inline-block;
-  padding-left: 40px;
-  padding-right: 40px; }
+  padding-left: 30px;
+  padding-right: 30px; }
 
 .header-nav-el a {
   color: white; }
@@ -6119,13 +6119,19 @@ textarea.tile-input {
   min-height: 50px;
   min-width: 50px;
   text-align: center;
-  line-height: 5vw;
-  border-radius: 100px;
-  border-width: 3px;
-  border-style: solid;
   cursor: pointer;
-  padding-left: 3px;
-  padding-top: 3px; }
+  /*
+	line-height: 5vw;
+	border-radius: 100px;
+	border-width: $border-width;
+	border-style: solid;
+	padding-left: 3px;
+	padding-top: 3px;
+	*/ }
+
+.tile-video-play > img {
+  width: 60px;
+  height: 60px; }
 
 .tile-lightbox-overlay {
   position: fixed;
