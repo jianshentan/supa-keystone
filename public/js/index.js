@@ -65,18 +65,30 @@ $(document).ready(function() {
   /* ----------------------
    * LIGHT BOX 
    * ---------------------- */
+  var frame = $(".tile-lightbox iframe");
+  var vidsrc = frame.attr('src');
+ 
   $(".tile-lightbox-close").click(function() {
     $(this).parent().parent().css("display", "none");
+    frame.attr('src', '');  
   });  
   
   $(".tile-lightbox-overlay").click(function() {
     $(this).css("display", "none");
+    frame.attr('src', '');  
   });
   
   $(".tile-video-play").click(function(){ 
     $(this).next(".tile-lightbox-overlay").css("display", "block");
+    frame.attr('src', vidsrc);
   });
    
+  /* ----------------------
+   * Video
+   * ---------------------- */ 
+   
+ 
+  
   /* ----------------------
    * FAQ Interactions
    * ---------------------- */ 
@@ -87,7 +99,7 @@ $(document).ready(function() {
       $(this).parent().find(".faq-section-toggle").toggleClass("open");
     });
   });
-
+  
   /* ----------------------
    * Contact form
    * ---------------------- */ 
@@ -96,6 +108,9 @@ $(document).ready(function() {
   
   // Bind to the submit event of our form
   $("#tile-contact-form").submit(function(event){
+    $("#tile-contact-submit-button").removeClass("active");
+    $("#tile-contact-submit-loading").addClass("active");
+    $('#tile-contact-form input, #tile-contact-form textarea').attr('readonly', 'readonly');
   
     // Abort any pending request
     if (request) {
@@ -117,7 +132,7 @@ $(document).ready(function() {
   
     // Fire off the request to /form.php
     request = $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbyzqOikBa1X81ic7lE8NfCladOJR00fPidqxX3Aw8SOEjYHwJ4/exec",
+        url: "https://script.google.com/macros/s/AKfycbwIRjzmvyY03GKZkifN2uAUAddb-lweyxlI3k2KK9uA4i7D88s/exec",
         type: "post",
         data: serializedData
     });
@@ -125,10 +140,12 @@ $(document).ready(function() {
     // Callback handler that will be called on success
     request.done(function (response, textStatus, jqXHR){
         // Log a message to the console
-        console.log("Hooray, it worked!");
+        console.log("Submit to google spreadsheet worked!");
         console.log(response);
         console.log(textStatus);
         console.log(jqXHR);
+        $("#tile-contact-submit-loading").removeClass("active");
+        $("#tile-contact-submit-success").addClass("active");
     });
   
     // Callback handler that will be called on failure
@@ -138,6 +155,8 @@ $(document).ready(function() {
             "The following error occurred: "+
             textStatus, errorThrown
         );
+        $("#tile-contact-submit-loading").removeClass("active");
+        $("#tile-contact-submit-fail").addClass("active");
     });
   
     // Callback handler that will be called regardless

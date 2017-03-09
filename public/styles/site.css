@@ -5994,6 +5994,7 @@ body {
 /* TILES */
 .tile {
   height: 45vw;
+  min-height: 432px;
   display: inline-block;
   border-left: 3px solid white;
   border-right: 3px solid white;
@@ -6176,6 +6177,30 @@ textarea.tile-input {
 
 .tile a {
   color: white; }
+
+.tile-contact-submit-container {
+  position: relative; }
+
+.tile-contact-submit-result {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transition: 300ms ease all;
+  -moz-transition: 300ms ease all;
+  -o-transition: 300ms ease all;
+  transition: 300ms ease all; }
+
+#tile-contact-submit-button,
+#tile-contact-submit-loading,
+#tile-contact-submit-success,
+#tile-contact-submit-fail {
+  display: none; }
+
+#tile-contact-submit-button.active,
+#tile-contact-submit-loading.active,
+#tile-contact-submit-success.active,
+#tile-contact-submit-fail.active {
+  display: inline-block; }
 
 /* FAQ */
 .faq-container {

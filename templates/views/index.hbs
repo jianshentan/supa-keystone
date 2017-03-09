@@ -297,13 +297,14 @@
 				<br>
 				<input name="email" class="tile-input" type="email" placeholder="your@email.here" style="width:100%;">
 				<br>
-				<textarea name="message" rows="3" class="tile-input">Any Suggestions?</textarea>
+				<textarea name="message" rows="3" class="tile-input" placeholder="Any Suggestions?"></textarea>
 				<br>
-				<button class="tile-button" type="submit" style="
-				background-color: {{backgroundColor}};
-			  border-color: {{color}};
-			  color: {{color}};
-				">SUBMIT</button>
+				<div class="tile-contact-submit-container">
+					<button id="tile-contact-submit-button" class="tile-button tile-contact-submit-result active" type="submit" style="background-color:{{backgroundColor}};border-color:{{color}};color:{{color}};">SUBMIT</button>
+					<div id="tile-contact-submit-success" class="tile-button tile-contact-submit-result" style="background-color:#85E219;color:{{color}};border-color:{{color}};">Sent! :)</div>
+					<div id="tile-contact-submit-fail" class="tile-button tile-contact-submit-result" style="background-color:#FF044C;color:{{color}};border-color:{{color}};">Something went wrong :(</div>
+					<div id="tile-contact-submit-loading" class="tile-button tile-contact-submit-result" style="background-color:{{backgroundColor}};color:{{color}};border-color:{{color}};">...</div>
+				</div>
 			</form>
 		</div>
 		{{/ifeq}}
