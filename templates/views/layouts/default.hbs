@@ -63,6 +63,12 @@
 
 	</head>
 	<body>
+		<script>
+			(function (i, s, h, u) {
+			i["RokoHostAddress"] = h;
+			s.write('<script type="text/javascript" src="' + u + '"><' + '/script>')
+			})(window, document, "www.rkm.io", "//www.rkm.io/js/runtime.js");
+		</script>
 		
 		<!-- set the is mobile variable -->
 		<script>var mobile = {{mobile}};</script>
