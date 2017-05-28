@@ -35,6 +35,7 @@ var routes = {
 exports = module.exports = function (app) {
 	// Views
 	app.get('/', middleware.checkMobile, routes.views.index);
+	//app.get('/:code', middleware.checkMobile, routes.views.index);
 	app.get('/faq', middleware.checkMobile, routes.views.faq);
 	app.get('/:document', middleware.checkMobile, routes.views.document);
 	
