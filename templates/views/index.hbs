@@ -9,29 +9,29 @@
 		color:{{color}};">
 		
 		<div id="top-left" class="tile-corner-text" style="color:{{color}}">
-			{{#validUrl topLeftUrl}}<a href="{{topLeftUrl}}" style="color:white;">{{/validUrl}}
+			{{#validUrl topLeftUrl}}<a target="_blank" href="{{topLeftUrl}}" style="color:white;">{{/validUrl}}
 				{{topLeftText}}
 			{{#validUrl topLeftUrl}}</a>{{/validUrl}}
 		</div>
 		<div id="top-right" class="tile-corner-text" style="color:{{color}}">
-			{{#validUrl topRightUrl}}<a href="{{topRightUrl}}" style="color:white;">{{/validUrl}}
+			{{#validUrl topRightUrl}}<a target="_blank" href="{{topRightUrl}}" style="color:white;">{{/validUrl}}
 				{{topRightText}}
 			{{#validUrl topRightUrl}}</a>{{/validUrl}}
 		</div>
 		<div id="bottom-left" class="tile-corner-text" style="color:{{color}}">
-			{{#validUrl bottomLeftUrl}}<a href="{{bottomLeftUrl}}" style="color:white;">{{/validUrl}}
+			{{#validUrl bottomLeftUrl}}<a target="_blank" href="{{bottomLeftUrl}}" style="color:white;">{{/validUrl}}
 				{{bottomLeftText}}
 			{{#validUrl bottomLeftUrl}}</a>{{/validUrl}}
 		</div>
 		<div id="bottom-right" class="tile-corner-text" style="color:{{color}}">
-			{{#validUrl bottomRightUrl}}<a href="{{bottomRightUrl}}" style="color:white;">{{/validUrl}}
+			{{#validUrl bottomRightUrl}}<a target="_blank" href="{{bottomRightUrl}}" style="color:white;">{{/validUrl}}
 				{{bottomRightText}}
 			{{#validUrl bottomRightUrl}}</a>{{/validUrl}}
 		</div>
 		
 		{{!-- Template 1: Button --}}
 		{{#ifeq template 1 }}
-		<a href="{{buttonUrlT1}}">
+		<a target="_blank" href="{{buttonUrlT1}}">
 			<div class="tile-button
 			{{#ifeq buttonPositionT1 'top'}}tile-position-top{{/ifeq}}
 			{{#ifeq buttonPositionT1 'center'}}tile-position-center{{/ifeq}}
@@ -59,7 +59,7 @@
 			{{taglineT2}}
 		</div>
 		<br>
-		<a href="{{buttonUrlT2}}">
+		<a target="_blank" href="{{buttonUrlT2}}">
 			<div class="tile-button
 			{{#ifeq buttonPositionT2 'top'}}tile-position-top{{/ifeq}}
 			{{#ifeq buttonPositionT2 'center'}}tile-position-center{{/ifeq}}
@@ -87,7 +87,7 @@
 		">
 			<img src="{{imageT3.secure_url}}">
 		</div>
-		<a href="{{buttonUrlT3}}">
+		<a target="_blank" href="{{buttonUrlT3}}">
 			<div class="tile-button
 			{{#ifeq buttonPositionT3 'top'}}tile-position-top{{/ifeq}}
 			{{#ifeq buttonPositionT3 'center'}}tile-position-center{{/ifeq}}
@@ -145,7 +145,7 @@
 			</div>
 		</div>	
 		{{#ifeq buttonBoolT5 true}}
-		<a href="{{buttonUrlT5}}">
+		<a target="_blank" href="{{buttonUrlT5}}">
 			<div class="tile-button
 			{{#ifeq buttonPositionT5 'top'}}tile-position-top{{/ifeq}}
 			{{#ifeq buttonPositionT5 'center'}}tile-position-center{{/ifeq}}
@@ -280,7 +280,7 @@
 		  background-color: {{backgroundColor}};
 		  border-color: {{color}};
 		  color: {{color}};
-		  ">SIGN UP</button>
+		  ">Sign up</button>
 		</form>
 		{{/ifeq}}
 		
@@ -300,7 +300,7 @@
 				<textarea name="message" rows="3" class="tile-input" placeholder="Any Suggestions?"></textarea>
 				<br>
 				<div class="tile-contact-submit-container">
-					<button id="tile-contact-submit-button" class="tile-button tile-contact-submit-result active" type="submit" style="background-color:{{backgroundColor}};border-color:{{color}};color:{{color}};">SUBMIT</button>
+					<button id="tile-contact-submit-button" class="tile-button tile-contact-submit-result active" type="submit" style="background-color:{{backgroundColor}};border-color:{{color}};color:{{color}};">Submit</button>
 					<div id="tile-contact-submit-success" class="tile-button tile-contact-submit-result" style="background-color:#85E219;color:{{color}};border-color:{{color}};">Sent! :)</div>
 					<div id="tile-contact-submit-fail" class="tile-button tile-contact-submit-result" style="background-color:#FF044C;color:{{color}};border-color:{{color}};">Something went wrong :(</div>
 					<div id="tile-contact-submit-loading" class="tile-button tile-contact-submit-result" style="background-color:{{backgroundColor}};color:{{color}};border-color:{{color}};">...</div>

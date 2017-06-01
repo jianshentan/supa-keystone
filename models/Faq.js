@@ -145,6 +145,69 @@ Faq.add(
 			label: "Answer Text",
 			type: Types.Textarea
 		}
+	},
+	{
+		question7: { type: Types.Boolean, label: "Enable Question 7" }
+	},
+	{ heading: "Question 7", dependsOn: { question4: true } },
+	{
+		title4: {
+			dependsOn: { question7: true },
+			label: "Question Title",
+			type: Types.Text
+		},
+		answerImage7: {
+			dependsOn: { question7: true },
+			label: "Answer Image",
+			type: Types.CloudinaryImage
+		},
+		answerText7: {
+			dependsOn: { question7: true },
+			label: "Answer Text",
+			type: Types.Textarea
+		}
+	},
+	{
+		question8: { type: Types.Boolean, label: "Enable Question 8" }
+	},
+	{ heading: "Question 8", dependsOn: { question5: true } },
+	{
+		title5: {
+			dependsOn: { question8: true },
+			label: "Question Title",
+			type: Types.Text
+		},
+		answerImage8: {
+			dependsOn: { question8: true },
+			label: "Answer Image",
+			type: Types.CloudinaryImage
+		},
+		answerText8: {
+			dependsOn: { question8: true },
+			label: "Answer Text",
+			type: Types.Textarea
+		}
+	},
+	{
+		question9: { type: Types.Boolean, label: "Enable Question 9" }
+	},
+	{ heading: "Question 9", dependsOn: { question9: true } },
+	{
+		title6: {
+			dependsOn: { question9: true },
+			label: "Question Title",
+			type: Types.Text
+		},
+		answerImage9: {
+			dependsOn: { question9: true },
+			label: "Answer Image",
+			type: Types.CloudinaryImage
+		},
+		answerText9: {
+			dependsOn: { question9: true },
+			label: "Answer Text",
+			type: Types.Textarea
+		}
 	}
 );
 
