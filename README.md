@@ -8,6 +8,11 @@
 2. install forever (sudo npm install -g forever)
 3. run keystone webapp with forever: (sudo forever start keystone.js)
 
+## Force renew letsencrypt cert
+1. sudo service nginx stop (stop nginx server)
+2. /opt/letsencrypt/certbot-auto renew
+3. sudo service nginx start (start nginx server)
+
 ## Update code (do not make changes on the ec2 instance):
 1. clone from github (git clone ...)
 2. stop all processes in forever (sudo forever stopall)
