@@ -5828,7 +5828,8 @@ body {
   overflow-y: auto; }
 
 #body {
-  min-height: calc(100vh - 140px); }
+  min-height: calc(100vh - 140px);
+  margin-top: 50px; }
 
 /* UTILITY CLASSES */
 .absolute-center {
