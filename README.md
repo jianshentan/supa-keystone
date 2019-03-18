@@ -2,6 +2,10 @@
 
 This file shows how to update and modify www.supa.ai.
 
+#### Specs:
+- Node App running Keystone 
+- Nginx version: nginx/1.10.3 (Ubuntu)
+
 [The website currently runs on aws (credentials to be gotten from the SUPA team)]
 
 ## To update letsencrypt cert:
